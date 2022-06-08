@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+  <plugin-info>
+    <description>${project.description}</description>
+    <version>${project.version}</version>
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+    <param name="plugin-icon">images/pluginIcon.png</param>
+    <param name="plugin-logo">images/pluginLogo.png</param>
+  </plugin-info>
+  <!-- add our i18n resource -->
+  <resource type="i18n" name="i18n" location="select2multiCF"/>
+  <!-- add our web resources -->
+  <web-resource key="select2multiCF-resources" name="select2multiCF Web Resources">
+    <dependency>com.atlassian.auiplugin:ajs</dependency>
+    <!-- dependency below are taken from example at
+https://community.atlassian.com/t5/Jira-discussions/Jira-Custom-Field-Select2-problems/td-p/1833237 -->
+    <dependency>com.atlassian.auiplugin:jquery</dependency>
+    <dependency>com.atlassian.auiplugin:jquery-ui-other</dependency>
+    <dependency>com.atlassian.auiplugin:aui-select2</dependency>
+    <resource type="download" name="select2multiCF.css" location="/css/select2multiCF.css"/>
+    <resource type="download" name="select2multiCF.js" location="/js/select2multiCF.js"/>
+    <resource type="download" name="images/" location="/images"/>
+    <context>select2multiCF</context>
+  </web-resource>
+  <customfield-type name="Select 2multi CF" i18n-name-key="select-2multi-cf.name" key="select-2multi-cf" class="ru.homecredit.jiraplugin.jira.customfields.Select2multiCF">
+    <description key="select-2multi-cf.description">The Select 2multi CF Plugin</description>
+    <resource name="view" type="velocity" location="/templates/customfields/select-2multi-cf/view.vm"/>
+    <resource name="edit" type="velocity" location="/templates/customfields/select-2multi-cf/edit.vm"/>
+  </customfield-type>
+</atlassian-plugin>

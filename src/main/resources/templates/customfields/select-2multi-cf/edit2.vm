@@ -1,0 +1,25 @@
+##<h1>edit.vm</h1>
+
+#disable_html_escaping()
+#controlHeader ($action $customField.id $customField.name $fieldLayoutItem.required
+$displayParameters.noHeader $auiparams)
+#if ($value)
+    #set ($selectedValues = $value)
+#end
+<script type="text/javascript">
+  AJS.toInit(function () {
+     AJS.$("#$customField.id").auiSelect2();
+    ## alert("template script running");
+  });
+</script>
+
+<select class="js-example-placeholder-single js-states form-control"
+       name="$customField.id" id="$customField.id" multiple="multiple"
+       data-submit-input-val="true">
+  <option></option>
+  #foreach ($option in $configs.options) ## it was critical use configs.options instead of options
+    <option value="$option">$option</option>
+  #end
+</select>
+#controlFooter ($action $fieldLayoutItem.fieldDescription $displayParameters.noHeader
+$auiparams)

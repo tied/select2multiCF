@@ -1,0 +1,10 @@
+#if( $value )
+    #foreach( $customOption in $value )
+        <span style="word-break: normal;#if( $customOption.deleted )text-decoration:line-through;#end">
+        $customOption.value
+        </span>
+        #if( $velocityCount != $value.size() )
+        ,
+        #end
+    #end
+#end
