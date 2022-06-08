@@ -23,7 +23,9 @@ https://community.atlassian.com/t5/Jira-discussions/Jira-Custom-Field-Select2-pr
     <resource type="download" name="images/" location="/images"/>
     <context>select2multiCF</context>
   </web-resource>
-  <customfield-type name="Select 2multi CF" i18n-name-key="select-2multi-cf.name" key="select-2multi-cf" class="ru.homecredit.jiraplugin.jira.customfields.Select2multiCF">
+  <customfield-type name="Select 2multi CF" i18n-name-key="select-2multi-cf.name"
+                    key="select-2multi-cf"
+                    class="ru.homecredit.jiraplugin.jira.customfields.Select2multiCF">
     <description key="select-2multi-cf.description">The Select 2multi CF Plugin</description>
     <resource name="view" type="velocity" location="/templates/customfields/select-2multi-cf/view.vm"/>
     <resource name="edit" type="velocity" location="/templates/customfields/select-2multi-cf/edit.vm"/>
