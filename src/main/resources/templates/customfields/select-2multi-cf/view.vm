@@ -1,6 +1,6 @@
 <script type="text/javascript">
 (function($) {
-    AJS.$("#$customField.id option[value='-1']").remove(); //Removes the default value "None"
+    AJS.$("#$customField.id option[value='-1']").remove(); ##Removes the default value "None"
     function convertMulti(id){
         if (AJS.$('#'+id+"-textarea").length == 0){
             new AJS.MultiSelect({
