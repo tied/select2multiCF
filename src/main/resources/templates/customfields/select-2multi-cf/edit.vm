@@ -3,11 +3,11 @@
 $fieldLayoutItem.required $displayParameters $auiparams)
 <script type="text/javascript">
   AJS.toInit(function () {
-     AJS.$("#$customField.id").auiSelect2();
+     AJS.$(".select-2-multi-cf").auiSelect2();
     ## alert("template script running");
   });
 </script>
-<select class="js-example-placeholder-single js-states form-control" id="$customField.id"
+<select class="select-2-multi-cf" id="$customField.id"
 multiple="multiple" name="$customField.id">
 
     <option></option>
