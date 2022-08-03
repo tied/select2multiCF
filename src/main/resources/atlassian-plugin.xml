@@ -22,20 +22,20 @@ https://community.atlassian.com/t5/Jira-discussions/Jira-Custom-Field-Select2-pr
     <context>select2CF</context>
   </web-resource>
 
-  <customfield-type name="Select 2multi CF" i18n-name-key="select-2multi-cf.name"
-                    key="select-2multi-cf"
+  <customfield-type name="Select 2 multi CF" i18n-name-key="select-2-multi-cf.name"
+                    key="select-2-multi-cf"
                     class="ru.homecredit.select2cf.jira.customfields.Select2multiCF">
-    <description key="select-2multi-cf.description"/>
+    <description key="select-2-multi-cf.description"/>
     <resource name="view" type="velocity"
               location="/templates/customfields/select2cf/viewMulti.vm"/>
     <resource name="edit" type="velocity"
               location="/templates/customfields/select2cf/editMulti.vm"/>
   </customfield-type>
 
-  <customfield-type name="Select 2single CF" i18n-name-key="select-2single-cf.name"
-                    key="select-2single-cf"
+  <customfield-type name="Select 2 single CF" i18n-name-key="select-2-single-cf.name"
+                    key="select-2-single-cf"
                     class="ru.homecredit.select2cf.jira.customfields.Select2singleCF">
-    <description key="select-2single-cf.description"/>
+    <description key="select-2-single-cf.description"/>
     <resource name="view" type="velocity"
               location="/templates/customfields/select2cf/viewSingle.vm"/>
     <resource name="edit" type="velocity"
