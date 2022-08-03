@@ -7,8 +7,8 @@ $fieldLayoutItem.required $displayParameters $auiparams)
     ## alert("template script running");
   });
 </script>
-<select class="select-2-multi-cf" id="$customField.id"
-multiple="multiple" name="$customField.id">
+<select class="select-2-multi-cf" id="$customField.id" multiple="multiple"
+name="$customField.id">
 
     <option></option>
     #foreach( $option in $configs.options ) )

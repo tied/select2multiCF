@@ -1,8 +1,8 @@
-package ut.ru.homecredit.jiraplugin;
+package ut.ru.homecredit.select2cf;
 
 import org.junit.Test;
-import ru.homecredit.jiraplugin.api.MyPluginComponent;
-import ru.homecredit.jiraplugin.impl.MyPluginComponentImpl;
+import ru.homecredit.select2cf.api.MyPluginComponent;
+import ru.homecredit.select2cf.impl.MyPluginComponentImpl;
 
 import static org.junit.Assert.assertEquals;
 

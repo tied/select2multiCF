@@ -1,4 +1,4 @@
-package ru.homecredit.jiraplugin.jira.customfields;
+package ru.homecredit.select2cf.jira.customfields;
 
 import com.atlassian.jira.bc.issue.search.SearchService;
 import com.atlassian.jira.config.FeatureManager;

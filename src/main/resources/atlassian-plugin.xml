@@ -9,9 +9,9 @@
     <param name="plugin-logo">images/pluginLogo.png</param>
   </plugin-info>
   <!-- add our i18n resource -->
-  <resource type="i18n" name="i18n" location="select2multiCF"/>
+  <resource type="i18n" name="i18n" location="select2CF"/>
   <!-- add our web resources -->
-  <web-resource key="select2multiCF-resources" name="select2multiCF Web Resources">
+  <web-resource key="select2CF-resources" name="select2CF Web Resources">
     <dependency>com.atlassian.auiplugin:ajs</dependency>
     <!-- dependency below are taken from example at
 https://community.atlassian.com/t5/Jira-discussions/Jira-Custom-Field-Select2-problems/td-p/1833237 -->
@@ -19,27 +19,27 @@ https://community.atlassian.com/t5/Jira-discussions/Jira-Custom-Field-Select2-pr
     <dependency>com.atlassian.auiplugin:jquery-ui-other</dependency>
     <dependency>com.atlassian.auiplugin:aui-select2</dependency>
     <resource type="download" name="images/" location="/images"/>
-    <context>select2multiCF</context>
+    <context>select2CF</context>
   </web-resource>
 
   <customfield-type name="Select 2multi CF" i18n-name-key="select-2multi-cf.name"
                     key="select-2multi-cf"
-                    class="ru.homecredit.jiraplugin.jira.customfields.Select2multiCF">
+                    class="ru.homecredit.select2cf.jira.customfields.Select2multiCF">
     <description key="select-2multi-cf.description"/>
     <resource name="view" type="velocity"
-              location="/templates/customfields/select-2multi-cf/view.vm"/>
+              location="/templates/customfields/select2cf/viewMulti.vm"/>
     <resource name="edit" type="velocity"
-              location="/templates/customfields/select-2multi-cf/edit.vm"/>
+              location="/templates/customfields/select2cf/editMulti.vm"/>
   </customfield-type>
 
   <customfield-type name="Select 2single CF" i18n-name-key="select-2single-cf.name"
                     key="select-2single-cf"
-                    class="ru.homecredit.jiraplugin.jira.customfields.Select2singleCF">
+                    class="ru.homecredit.select2cf.jira.customfields.Select2singleCF">
     <description key="select-2single-cf.description"/>
     <resource name="view" type="velocity"
-              location="/templates/customfields/select-2multi-cf/viewSingle.vm"/>
+              location="/templates/customfields/select2cf/viewSingle.vm"/>
     <resource name="edit" type="velocity"
-              location="/templates/customfields/select-2multi-cf/editSingle.vm"/>
+              location="/templates/customfields/select2cf/editSingle.vm"/>
   </customfield-type>
 
 </atlassian-plugin>

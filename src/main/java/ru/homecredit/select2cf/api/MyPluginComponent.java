@@ -1,4 +1,4 @@
-package ru.homecredit.jiraplugin.api;
+package ru.homecredit.select2cf.api;
 
 public interface MyPluginComponent
 {

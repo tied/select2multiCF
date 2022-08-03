@@ -1,9 +1,9 @@
-package it.ru.homecredit.jiraplugin;
+package it.ru.homecredit.select2cf;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import com.atlassian.plugins.osgi.test.AtlassianPluginsTestRunner;
-import ru.homecredit.jiraplugin.api.MyPluginComponent;
+import ru.homecredit.select2cf.api.MyPluginComponent;
 import com.atlassian.sal.api.ApplicationProperties;
 
 import static org.junit.Assert.assertEquals;

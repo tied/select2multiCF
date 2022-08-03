@@ -1,11 +1,8 @@
-package ut.ru.homecredit.jiraplugin.jira.customfields;
+package ut.ru.homecredit.select2cf.jira.customfields;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import ru.homecredit.jiraplugin.jira.customfields.Select2multiCF;
-
-import static org.mockito.Mockito.*;
 
 /**
  * @since 3.5

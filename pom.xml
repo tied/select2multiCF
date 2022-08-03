@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>ru.homecredit.jiraplugin</groupId>
-    <artifactId>select2multiCF</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <groupId>ru.homecredit</groupId>
+    <artifactId>select2CF</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
     <organization>
         <name>Home Credit Bank</name>
         <url>http://www.homecredit.ru/</url>
     </organization>
-    <name>select2multiCF</name>
-    <description>provides multiselect custom field with "Labels-like" edit template</description>
+    <name>Jira AUIselect2 Customfields Plugin</name>
+    <description>provides multiselect and single select custom field with "Labels-like"
+    feel and look</description>
     <packaging>atlassian-plugin</packaging>
     <dependencies>
         <dependency>
@@ -141,7 +144,7 @@
                     <instructions>
                         <Atlassian-Plugin-Key>${atlassian.plugin.key}</Atlassian-Plugin-Key>
                         <!-- Add package to export here -->
-                        <Export-Package>ru.homecredit.jiraplugin.api,</Export-Package>
+                        <Export-Package>${atlassian.plugin.key}.api,</Export-Package>
                         <!-- Add package import here -->
                         <Import-Package>
                             rg.springframework.osgi.*;resolution:="optional",

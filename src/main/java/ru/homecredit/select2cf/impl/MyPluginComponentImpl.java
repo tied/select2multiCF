@@ -1,9 +1,9 @@
-package ru.homecredit.jiraplugin.impl;
+package ru.homecredit.select2cf.impl;
 
 import com.atlassian.plugin.spring.scanner.annotation.export.ExportAsService;
 import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
 import com.atlassian.sal.api.ApplicationProperties;
-import ru.homecredit.jiraplugin.api.MyPluginComponent;
+import ru.homecredit.select2cf.api.MyPluginComponent;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -27,7 +27,7 @@ public class MyPluginComponentImpl implements MyPluginComponent
         {
             return "myComponent:" + applicationProperties.getDisplayName();
         }
-        
+
         return "myComponent";
     }
 }
