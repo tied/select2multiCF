@@ -1,11 +1,3 @@
-Plugin for implementation of JIRA multiselect field with aui select2 renderer
-by implementing new customfield type
-
-base functions are working properly now. field is being rendered and pics a
-values
-
-everything that was necessary to accomplish that - correct pom.xml and
-atlassian-plugin.xml from atlassian tutorial (it was incomplete and outdated),
-implement main class with inherits from superclasses without overriding any
-methods, and develop proper velocity template to make multiselect custom field
-look like versions or labels jira standard fields
+Plugin for implementation of JIRA multiselect and single select list fields
+with aui select2 look and feel (like fix Version's field)by implementing new
+customfield types

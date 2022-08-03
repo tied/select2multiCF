@@ -18,16 +18,28 @@ https://community.atlassian.com/t5/Jira-discussions/Jira-Custom-Field-Select2-pr
     <dependency>com.atlassian.auiplugin:jquery</dependency>
     <dependency>com.atlassian.auiplugin:jquery-ui-other</dependency>
     <dependency>com.atlassian.auiplugin:aui-select2</dependency>
-    <resource type="download" name="select2multiCF.css" location="/css/select2multiCF.css"/>
-    <resource type="download" name="select2multiCF.js" location="/js/select2multiCF.js"/>
     <resource type="download" name="images/" location="/images"/>
     <context>select2multiCF</context>
   </web-resource>
+
   <customfield-type name="Select 2multi CF" i18n-name-key="select-2multi-cf.name"
                     key="select-2multi-cf"
                     class="ru.homecredit.jiraplugin.jira.customfields.Select2multiCF">
-    <description key="select-2multi-cf.description">The Select 2multi CF Plugin</description>
-    <resource name="view" type="velocity" location="/templates/customfields/select-2multi-cf/view.vm"/>
-    <resource name="edit" type="velocity" location="/templates/customfields/select-2multi-cf/edit.vm"/>
+    <description key="select-2multi-cf.description"/>
+    <resource name="view" type="velocity"
+              location="/templates/customfields/select-2multi-cf/view.vm"/>
+    <resource name="edit" type="velocity"
+              location="/templates/customfields/select-2multi-cf/edit.vm"/>
   </customfield-type>
+
+  <customfield-type name="Select 2single CF" i18n-name-key="select-2single-cf.name"
+                    key="select-2single-cf"
+                    class="ru.homecredit.jiraplugin.jira.customfields.Select2singleCF">
+    <description key="select-2single-cf.description"/>
+    <resource name="view" type="velocity"
+              location="/templates/customfields/select-2multi-cf/viewSingle.vm"/>
+    <resource name="edit" type="velocity"
+              location="/templates/customfields/select-2multi-cf/editSingle.vm"/>
+  </customfield-type>
+
 </atlassian-plugin>

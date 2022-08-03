@@ -1,0 +1,18 @@
+#disable_html_escaping()
+#customControlHeader ($action $customField.id $customField.name
+$fieldLayoutItem.required $displayParameters $auiparams)
+<script type="text/javascript">
+  AJS.toInit(function () {
+     AJS.$(".select-2-single-cf").auiSelect2({allowClear: true,});
+    ## alert("template script running");
+  });
+</script>
+<select class="select-2-single-cf" id="$customField.id"
+name="$customField.id">
+    <option></option>
+    #foreach($option in $configs.options)
+        <option value="$option.optionId" #if( $value == $option.optionId )
+        selected="selected" #end>$option.value</option>
+    #end
+</select>
+#customControlFooter ($action $customField.id $fieldLayoutItem.fieldDescription $displayParameters $auiparams)
