@@ -1,10 +1,10 @@
 package it.ru.homecredit.select2cf;
 
+import com.atlassian.plugins.osgi.test.AtlassianPluginsTestRunner;
+import com.atlassian.sal.api.ApplicationProperties;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import com.atlassian.plugins.osgi.test.AtlassianPluginsTestRunner;
 import ru.homecredit.select2cf.api.MyPluginComponent;
-import com.atlassian.sal.api.ApplicationProperties;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,9 +12,11 @@ import static org.junit.Assert.assertEquals;
 public class MyComponentWiredTest
 {
     private final ApplicationProperties applicationProperties;
-    private final MyPluginComponent myPluginComponent;
 
-    public MyComponentWiredTest(ApplicationProperties applicationProperties,MyPluginComponent myPluginComponent)
+    private final MyPluginComponent myPluginComponent;
+    
+    public MyComponentWiredTest(ApplicationProperties applicationProperties,
+                                MyPluginComponent myPluginComponent)
     {
         this.applicationProperties = applicationProperties;
         this.myPluginComponent = myPluginComponent;

@@ -11,7 +11,6 @@ import com.atlassian.jira.security.JiraAuthenticationContext;
 import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -35,7 +34,7 @@ public class Select2multiCF extends MultiSelectCFType {
     spring scanner
     https://developer.atlassian.com/server/jira/platform/creating-a-custom-field-in-jira/
     */
-    @Autowired // appears to be unnecessary
+    //@Autowired // appears to be unnecessary
     @Inject
     public Select2multiCF(@ComponentImport OptionsManager optionsManager
             , @ComponentImport CustomFieldValuePersister customFieldValuePersister
