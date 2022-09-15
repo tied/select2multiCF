@@ -1,4 +1,4 @@
-package ru.homecredit.select2cf.jira.customfields;
+package ru.homecredit.select2cf.customfields;
 
 import com.atlassian.jira.issue.customfields.impl.SelectCFType;
 import com.atlassian.jira.issue.customfields.manager.GenericConfigManager;

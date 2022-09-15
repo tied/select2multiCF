@@ -1,4 +1,4 @@
-package ut.ru.homecredit.select2cf.jira.customfields;
+package ut.ru.homecredit.select2cf.customfields;
 
 import org.junit.After;
 import org.junit.Before;

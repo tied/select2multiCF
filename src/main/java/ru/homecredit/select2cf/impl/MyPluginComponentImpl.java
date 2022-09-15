@@ -12,11 +12,10 @@ import javax.inject.Named;
 @Named ("myPluginComponent")
 public class MyPluginComponentImpl implements MyPluginComponent
 {
-        @ComponentImport
         private final ApplicationProperties applicationProperties;
 
         @Inject
-        public MyPluginComponentImpl(final ApplicationProperties applicationProperties)
+        public MyPluginComponentImpl(@ComponentImport ApplicationProperties applicationProperties)
     {
         this.applicationProperties = applicationProperties;
     }

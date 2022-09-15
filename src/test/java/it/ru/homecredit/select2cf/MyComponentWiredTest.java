@@ -14,7 +14,7 @@ public class MyComponentWiredTest
     private final ApplicationProperties applicationProperties;
 
     private final MyPluginComponent myPluginComponent;
-    
+
     public MyComponentWiredTest(ApplicationProperties applicationProperties,
                                 MyPluginComponent myPluginComponent)
     {

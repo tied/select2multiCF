@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+<atlassian-plugin key="${atlassian.plugin.key}"
+                  name="${project.name}" plugins-version="2">
   <plugin-info>
     <description>${project.description}</description>
     <version>${project.version}</version>
@@ -9,9 +10,12 @@
     <param name="plugin-logo">images/pluginLogo.png</param>
   </plugin-info>
   <!-- add our i18n resource -->
-  <resource type="i18n" name="i18n" location="select2CF"/>
+  <resource type="i18n" name="i18n" location="${project.artifactId}"/>
   <!-- add our web resources -->
-  <web-resource key="select2CF-resources" name="select2CF Web Resources">
+  <web-resource key="${atlassian.plugin.key}.resources"
+                name="select2cf Web Resources">
+    <description key="${atlassian.plugin.key}.resources.description">
+      AUI plugin and png thumbnails</description>
     <dependency>com.atlassian.auiplugin:ajs</dependency>
     <!-- dependency below are taken from example at
 https://community.atlassian.com/t5/Jira-discussions/Jira-Custom-Field-Select2-problems/td-p/1833237 -->
@@ -19,40 +23,29 @@ https://community.atlassian.com/t5/Jira-discussions/Jira-Custom-Field-Select2-pr
     <dependency>com.atlassian.auiplugin:jquery-ui-other</dependency>
     <dependency>com.atlassian.auiplugin:aui-select2</dependency>
     <resource type="download" name="images/" location="/images"/>
-    <context>select2CF</context>
+    <context>${atlassian.plugin.key}</context>
   </web-resource>
 
   <customfield-type name="Select 2 multi CF" i18n-name-key="select-2-multi-cf.name"
                     key="select-2-multi-cf"
-                    class="ru.homecredit.select2cf.jira.customfields.Select2multiCF">
+                    class="ru.homecredit.select2cf.customfields.Select2multiCF">
     <description key="select-2-multi-cf.description"/>
     <resource name="view" type="velocity"
-              location="/templates/customfields/select2cf/viewMulti.vm"/>
+              location="/templates/viewMulti.vm"/>
     <resource name="edit" type="velocity"
-              location="/templates/customfields/select2cf/editMulti.vm"/>
+              location="/templates/editMulti.vm"/>
+    <valid-searcher package="com.atlassian.jira.plugin.system.customfieldtypes" key="multiselectsearcher"/>
   </customfield-type>
-
-  <customfield-searcher key="multiselect2searcher" name="Multi Select 2 Searcher"
-                        i18n-name-key="ru.homecredit.select2cf.jira.searchers.multiselect2searcher.name"
-                        class="ru.homecredit.select2cf.jira.searchers.MultiSelect2Searcher">
-    <description key="ru.homecredit.select2cf.jira.searchers.multiselect2searcher.desc">Search for multiple values using a single select list.</description>
-
-    <resource type="velocity" name="search" location="templates/searchers/search-multiselect2.vm"/>
-    <resource type="velocity" name="view"
-              location="templates/searchers/view-searcher-multioption2.vm"/>
-    <resource type="velocity" name="label"
-              location="templates/searchers/label-searcher-basictext2.vm"/>
-    <valid-customfield-type package="${atlassian.plugin.key}" key="select-2-multi-cf"/>
-  </customfield-searcher>
 
   <customfield-type name="Select 2 single CF" i18n-name-key="select-2-single-cf.name"
                     key="select-2-single-cf"
-                    class="ru.homecredit.select2cf.jira.customfields.Select2singleCF">
+                    class="ru.homecredit.select2cf.customfields.Select2singleCF">
     <description key="select-2-single-cf.description"/>
     <resource name="view" type="velocity"
-              location="/templates/customfields/select2cf/viewSingle.vm"/>
+              location="/templates/viewSingle.vm"/>
     <resource name="edit" type="velocity"
-              location="/templates/customfields/select2cf/editSingle.vm"/>
+              location="/templates/editSingle.vm"/>
+    <valid-searcher package="com.atlassian.jira.plugin.system.customfieldtypes" key="multiselectsearcher"/>
   </customfield-type>
 
 </atlassian-plugin>
